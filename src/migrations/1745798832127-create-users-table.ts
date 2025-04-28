@@ -15,6 +15,7 @@ export class CreateUsersTable1745798832127 implements MigrationInterface {
           {
             name: 'name',
             type: 'varchar',
+            length: '150',
           },
           {
             name: 'email',
@@ -24,6 +25,21 @@ export class CreateUsersTable1745798832127 implements MigrationInterface {
           {
             name: 'password',
             type: 'varchar',
+          },
+          {
+            name: 'created_at',
+            type: 'timestamp',
+            default: 'CURRENT_TIMESTAMP',
+          },
+          {
+            name: 'updated_at',
+            type: 'timestamp',
+            default: 'CURRENT_TIMESTAMP',
+          },
+          {
+            name: 'deleted_at',
+            type: 'timestamp',
+            isNullable: true,
           },
         ],
       }),
